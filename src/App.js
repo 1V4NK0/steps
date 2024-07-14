@@ -9,13 +9,12 @@ const messages = [
 export default function App() {
   const [step, setStep] = useState(1);
 
-  function handleNext() { 
-      if (step < 3) setStep(step + 1);
+  function handleNext() {
+    if (step < 3) setStep(step + 1);
   }
 
   function handlePrev() {
     if (step > 1) setStep(step - 1);
-    
   }
 
   return (
@@ -30,7 +29,10 @@ export default function App() {
         step {step} : {messages[step - 1]}
       </p>
       <div className="buttons">
-        <button style={{ backgroundColor: "#7950f2", color: "white" }} onClick={handlePrev}>
+        <button
+          style={{ backgroundColor: "#7950f2", color: "white" }}
+          onClick={handlePrev}
+        >
           previous
         </button>
         <button
